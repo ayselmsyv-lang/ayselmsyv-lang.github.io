@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aysel Musayeva | Portfolio</title>
+
   <style>
     * {
       margin: 0;
@@ -13,119 +14,238 @@
     }
 
     body {
-      background: #f6f8fb;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #cbd5e1;
-    }
-
-    nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #0f172a;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: #0f172a;
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #e0f2fe;
-      color: #0369a1;
-      padding: 8px 12px;
-      margin: 6px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-
-    .project {
-      border: 1px solid #e5e7eb;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
+      background: #f7f7fb;
       color: #111827;
     }
 
-    .project a, .contact a {
-      color: #2563eb;
+    nav {
+      padding: 20px 8%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4f46e5;
+      font-weight: bold;
+    }
+
+    .hero {
+      min-height: 600px;
+      background:
+        linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.78)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 80px 9%;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 25px;
+    }
+
+    .hero h3 {
+      font-size: 24px;
+      margin-bottom: 25px;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .hero p {
+      font-size: 22px;
+      margin-bottom: 35px;
+      color: #374151;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 28px;
+      margin-right: 12px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 18px;
+    }
+
+    .primary {
+      background: #4f46e5;
+      color: white;
+    }
+
+    .secondary {
+      border: 2px solid #4f46e5;
+      color: #4f46e5;
+      background: white;
+    }
+
+    section {
+      padding: 70px 9%;
+    }
+
+    .section-title {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 25px;
+    }
+
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-container img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #374151;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .skills span {
+      background: #dbeafe;
+      color: #0369a1;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .project-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      color: #4f46e5;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      color: #64748b;
+      padding: 30px;
+      background: #111827;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
-<body>
 
-  <header>
-    <h1>Aysel Musayeva</h1>
-    <p>Computer Science Student | Backend & AI Enthusiast</p>
-  </header>
+<body>
 
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#hackathons">Hackathons</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Aysel Musayeva</h1>
+      <h3>Backend Developer & Computer Science Student</h3>
+      <p>
+        Building backend applications with Python, APIs, databases,
+        and a growing interest in machine learning.
+      </p>
+      <a href="https://github.com/ayselmsyv-lang" class="btn primary" target="_blank">View GitHub</a>
+      <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+  </div>
+
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Science student interested in backend development,
-      AI-powered systems, databases, and real-world software projects.
-      I enjoy building practical applications, learning by doing, and
-      participating in hackathons.
-    </p>
+    <div class="about-container">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Technology image">
+
+      <div class="about-text">
+        <div class="section-title">ABOUT ME</div>
+        <h2>About Me</h2>
+        <p>
+          I am a Computer Science student interested in backend development,
+          AI-powered systems, databases, and real-world software projects.
+          I enjoy building practical applications, learning by doing,
+          and participating in hackathons.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
+    <div class="section-title">SKILLS</div>
+    <h2>Technical Skills</h2>
+
     <div class="skills">
       <span>Python</span>
       <span>FastAPI</span>
@@ -140,51 +260,62 @@
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <div class="section-title">PROJECTS</div>
+    <h2>My Projects</h2>
 
-    <div class="project">
-      <h3>AI Smart City Parking System</h3>
-      <p>
-        A hackathon project focused on helping users find better parking options
-        using backend APIs, prediction logic, and smart city data.
-      </p>
-      <p><strong>Tech:</strong> Python, FastAPI, SQLite/PostgreSQL</p>
-      <a href="#" target="_blank">View Project</a>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>AI Smart City Parking System</h3>
+        <p>
+          A hackathon project focused on smart parking recommendations,
+          backend APIs, and prediction logic.
+        </p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Fuzzy Spell Checker</h3>
+        <p>
+          A Python project that suggests corrections for misspelled words
+          using edit distance and ranking logic.
+        </p>
+        <a href="#" target="_blank">View Code</a>
+      </div>
     </div>
+  </section>
 
-    <div class="project">
-      <h3>Fuzzy Spell Checker</h3>
+  <section id="hackathons">
+    <div class="section-title">HACKATHONS</div>
+    <h2>Hackathons & Certificates</h2>
+
+    <div class="project-card">
+      <h3>AI Autonomous Smart City Hackathon 2026</h3>
       <p>
-        A spell correction tool that suggests likely corrections using edit distance.
+        Participated in an online student hackathon and worked on an
+        AI-powered smart city solution.
       </p>
-      <p><strong>Tech:</strong> Python, Dynamic Programming</p>
-      <a href="#" target="_blank">View Code</a>
+     <img src="./certificates/hackathon_certificate.jpg" alt="AI Smart City Hackathon Certificate" style="width:100%; max-width:900px; border-radius:12px; margin-top:20px;">
     </div>
-    
-    <section id="hackathons">
-  <h2>Hackathons & Certificates</h2>
+  </section>
 
-  <div class="project">
-    <h3>AI Autonomous Smart City Hackathon 2026</h3>
-    <p>
-      Participated in an online student hackathon and worked on an AI-powered
-      smart city parking solution.
-    </p>
-    <p><strong>Role:</strong> Backend / AI logic / project development</p>
-    <a href="certificates/hackathon_certificate.pdf" target="_blank">
-      View Certificate
+  <section id="contact">
+  <div class="section-title">CONTACT</div>
+  <h2>Contact Me</h2>
+
+  <p>Email: <a href="mailto:aysel.msyv@gmail.com">aysel.msyv@gmail.com</a></p>
+
+  <p>GitHub:
+    <a href="https://github.com/ayselmsyv-lang" target="_blank">
+      github.com/ayselmsyv-lang
     </a>
-  </div>
+  </p>
+
+  <p>LinkedIn:
+    <a href="https://www.linkedin.com/in/ayselmusayeva/" target="_blank">
+      linkedin.com/in/ayselmusayeva
+    </a>
+  </p>
 </section>
-
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>GitHub: <a href="https://github.com/ayselmsyv-lang" target="_blank">github.com/ayselmsyv-lang</a></p>
-    <p>LinkedIn: <a href="#" target="_blank">https://www.linkedin.com/in/ayselmusayeva/</a></p>
-    <p>Email: <a href="mailto:your-email@example.com">aysel.msyv@gmail.com</a></p>
-  </section>
 
   <footer>
     <p>© 2026 Aysel Musayeva. Built with HTML & CSS.</p>
