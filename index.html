@@ -12,19 +12,6 @@
       box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
-    <script>
-  const darkModeBtn = document.getElementById("darkModeBtn");
-
-  darkModeBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
-
-    if (document.body.classList.contains("dark")) {
-      darkModeBtn.textContent = "☀️";
-    } else {
-      darkModeBtn.textContent = "🌙";
-    }
-  });
-</script>
 
     body {
       background: #f7f7fb;
@@ -248,6 +235,7 @@ body.dark h3 {
 </head>
 
 <body>
+  
 
   <nav>
     <a href="#about">About</a>
@@ -367,6 +355,18 @@ body.dark h3 {
   <footer>
     <p>© 2026 Aysel Musayeva. Built with HTML & CSS.</p>
   </footer>
+<script>
+    const darkModeBtn = document.getElementById("darkModeBtn");
 
+  darkModeBtn.addEventListener("click", function () {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      darkModeBtn.textContent = "☀️";
+    } else {
+      darkModeBtn.textContent = "🌙";
+    }
+  });
+</script>
 </body>
 </html>
