@@ -510,7 +510,7 @@
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
@@ -540,6 +540,7 @@
   .project-thumb.p1 { background: linear-gradient(135deg, #0d1a14, #071a10); }
   .project-thumb.p2 { background: linear-gradient(135deg, #0d0d1a, #0a0714); }
   .project-thumb.p3 { background: linear-gradient(135deg, #1a0d0d, #140709); }
+  .project-thumb.p4 { background: linear-gradient(135deg, #0d1a1a, #071414); }
 
   .project-thumb-char {
     font-size: 5rem;
@@ -564,6 +565,7 @@
   }
   .mission-tag.m2 { background: var(--purple); color: var(--white); }
   .mission-tag.m3 { background: #e53935; color: var(--white); }
+  .mission-tag.m4 { background: #00bcd4; color: #000; }
 
   .project-content {
     padding: 1.2rem;
@@ -989,7 +991,8 @@
     section { padding: 4rem 2rem; }
     .about-inner, .skills-inner { grid-template-columns: 1fr; }
     .tech-grid { grid-template-columns: repeat(4, 1fr); }
-    .projects-grid { grid-template-columns: 1fr; }
+    .tech-grid { grid-template-columns: repeat(4, 1fr); }
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
     .timeline { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .timeline::before { display: none; }
     .achievements-inner, .contact-inner { grid-template-columns: 1fr; }
@@ -1194,6 +1197,45 @@
         </div>
       </div>
     </div>
+    <!-- Card 4 -->
+    <div class="project-card">
+      <div class="project-thumb p4">
+        <span class="project-thumb-char">🔤</span>
+        <span class="mission-tag m4">MISSION 04</span>
+        <!-- Animated scan lines for the spell-checker vibe -->
+        <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.08;pointer-events:none" viewBox="0 0 400 160" preserveAspectRatio="none">
+          <line x1="0" y1="20" x2="400" y2="20" stroke="#00e676" stroke-width="1"/>
+          <line x1="0" y1="40" x2="400" y2="40" stroke="#00e676" stroke-width="1"/>
+          <line x1="0" y1="60" x2="400" y2="60" stroke="#00e676" stroke-width="1"/>
+          <line x1="0" y1="80" x2="400" y2="80" stroke="#00e676" stroke-width="1"/>
+          <line x1="0" y1="100" x2="400" y2="100" stroke="#00e676" stroke-width="1"/>
+          <line x1="0" y1="120" x2="400" y2="120" stroke="#00e676" stroke-width="1"/>
+          <line x1="0" y1="140" x2="400" y2="140" stroke="#00e676" stroke-width="1"/>
+        </svg>
+        <!-- Typed correction preview -->
+        <div style="position:relative;z-index:1;text-align:center;font-family:'Share Tech Mono',monospace;font-size:0.75rem;line-height:2;color:rgba(0,230,118,0.9);">
+          <div style="color:rgba(255,100,100,0.8);text-decoration:line-through;">pyhon</div>
+          <div style="color:var(--green);">→ python ✓</div>
+          <div style="color:rgba(255,100,100,0.8);text-decoration:line-through;">appel</div>
+          <div style="color:var(--green);">→ apple ✓</div>
+        </div>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Fuzzy Spell Checker</h3>
+        <p class="project-desc">
+          Interactive spell checker using Dynamic Programming (Levenshtein distance) to suggest corrections for misspelled words. Ranks suggestions by edit distance, then alphabetically.
+        </p>
+        <div class="project-tags">
+          <span class="tag">🐍 Python</span>
+          <span class="tag" style="background:rgba(0,188,212,0.08);border-color:rgba(0,188,212,0.25);color:#00bcd4;">📊 Streamlit</span>
+          <span class="tag" style="background:rgba(0,188,212,0.08);border-color:rgba(0,188,212,0.25);color:#00bcd4;">🧮 DP / Levenshtein</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ayselmusayeva/fuzzy-spell-checker" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="project-link demo"><i class="fas fa-bolt"></i> Live Demo</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1252,18 +1294,24 @@
   <div class="timeline">
     <div class="timeline-item">
       <div class="tl-icon">&lt;/&gt;</div>
-      <div class="tl-year">2024</div>
-      <div class="tl-text">Started learning Python and Data Structures.</div>
+      <div class="tl-year">2022</div>
+      <div class="tl-text">Started learning Python.</div>
     </div>
+    <div class="timeline">
     <div class="timeline-item">
-      <div class="tl-icon">🔬</div>
-      <div class="tl-year">2025</div>
-      <div class="tl-text">Joined backend intern in Maestro School</div>
+      <div class="tl-icon">&lt;/&gt;</div>
+      <div class="tl-year">2024</div>
+      <div class="tl-text">Started learning Data Structures.</div>
     </div>
     <div class="timeline-item">
       <div class="tl-icon">🚀</div>
       <div class="tl-year">2025</div>
       <div class="tl-text">Built my first projects and explored APIs.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-icon">🔬</div>
+      <div class="tl-year">2025</div>
+      <div class="tl-text">Joined Backend intern in Maestro School.</div>
     </div>
     <div class="timeline-item">
       <div class="tl-icon">🏆</div>
@@ -1285,11 +1333,11 @@
       <h2 class="section-title">🏆 ACHIEVEMENTS</h2>
       <div class="achievement-card" style="grid-column:1;">
         <div class="achievement-row">
-          <div class="cert-thumb">
-            <span class="cert-icon">🏅</span>
-            <span class="cert-org">CERTIFICATE</span>
-            <span class="cert-title">AI Smart City Hackathon</span>
-          </div>
+          <div class="cert-thumb" style="padding:0;overflow:hidden;">
+            <img src="certificates-hackathon.png"
+               alt="Certificate"
+               style="width:100%;height:100%;object-fit:cover;">
+              </div>
           <div class="achievement-info">
             <h3>International Student Hackathon AI Smart City</h3>
             <div class="sub">Achievement Certificate</div>
@@ -1322,7 +1370,7 @@
             <span class="cl-icon"><i class="fas fa-envelope"></i></span>
             <div>
               <div class="cl-label">Email</div>
-              <div class="cl-value">ayselmusayeva88@gmail.com</div>
+              <div class="cl-value">aysel.msyv@gmail.com</div>
             </div>
           </a>
         </div>
